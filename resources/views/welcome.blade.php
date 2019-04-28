@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    github/hrvojekok
+                    Student Projects
                 </div>
             </div>
     </body>

@@ -26,7 +26,7 @@
                     </div>
                     <div>
                        <input type="submit" name="submit">
-                    </div> 
+                    </div>
                 </div>
             </div>
         </div>
