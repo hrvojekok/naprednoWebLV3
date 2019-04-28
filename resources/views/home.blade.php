@@ -15,6 +15,10 @@
                     @endif
 
                     You are logged in!
+
+                    <div class="links"><br>
+                        <a href="/newProject">Start a new project</a>
+                    </div>
                 </div>
             </div>
         </div>

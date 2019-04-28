@@ -12,8 +12,17 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('welcome', [
+    	
+    ]);
 });
+
+Route::get('/newProject', function () {
+    return view('newProject');
+});
+
+
+
 
 Auth::routes();
 

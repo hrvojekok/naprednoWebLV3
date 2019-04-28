@@ -4,8 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateProjectsTable extends Migration
-{
+class CreateProjectsTable extends Migration {
     /**
      * Run the migrations.
      *
@@ -20,7 +19,7 @@ class CreateProjectsTable extends Migration
             $table->string('cijena_projekta');
             $table->string('obavljeni_poslovi');
             $table->string('datum_pocetka');
-            $table->string('datum_završetka');
+            $table->string('datum_zavrsetka');
             $table->timestamps();
         });
     }
