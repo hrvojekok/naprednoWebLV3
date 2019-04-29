@@ -68,7 +68,7 @@
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a href="{{ url('/home') }}">My Projects</a>
+                        <a href="{{ url('/home') }}">My Profile</a>
                     @else
                         <a href="{{ route('login') }}">Login</a>
 
@@ -85,7 +85,7 @@
                 </div>
                 <div>
                   <?php
-                  
+
                     $projectNames = DB::table('projects')->pluck('naziv_projekta');
                     $size = sizeof($projectNames);
                     //echo($size);
