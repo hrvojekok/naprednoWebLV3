@@ -21,7 +21,8 @@ class CreateProjectsTable extends Migration {
             $table->string('datum_pocetka');
             $table->string('datum_zavrsetka');
             $table->string('voditelj_projekta');
-            $table->string('clanovi_projektnog_tima');
+            $table->string('clanovi_projektnog_tima0');
+            $table->string('clanovi_projektnog_tima1');
             $table->timestamps();
         });
     }

@@ -19,14 +19,75 @@
                     <form method="post" action="/create">
                       <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
                         <div>
+
+                          <!-- compares users from "users" table and the current user -->
+                              <!-- <?php
+
+                                $user = Auth::user();
+                                //print($user->name);
+                                $clanProjektnogTima = DB::table('users')->pluck('email');
+                                $currentUser = $user->email;
+                                //print($currentUser);
+                                //print($clanProjektnogTima);
+
+                                $size = sizeof($clanProjektnogTima);
+                                //echo($size);
+
+                                for($i=0; $i<$size; $i++){
+                                  if($currentUser == $clanProjektnogTima[$i]) {
+                                    echo("current: ");
+                                    print($currentUser);
+                                    echo("<br>");
+                                  } else {
+                                    $moguciClanoviProjektnogTima = "";
+                                    $moguciClanoviProjektnogTima .= $clanProjektnogTima[$i];
+                                    print($moguciClanoviProjektnogTima);
+                                    echo("<br>");
+                                    //print("failure");
+                                  }
+                                  //print_r($clanProjektnogTima[$i]);
+                                  //print($moguciClanoviProjektnogTima);
+                                  echo("<br>");
+                                }
+                              ?> -->
                             Naziv projekta: <input type="text" name="naziv_projekta"><br><br>
                             Opis projekta: <input type="text" name="opis_projekta"><br><br>
                             Cijena projekta: <input type="text" name="cijena_projekta"><br><br>
                             Obavljeni poslovi: <input type="text" name="obavljeni_poslovi"><br><br>
                             Datum početka: <input type="text" name="datum_pocetka"><br><br>
                             Datum završetka: <input type="text" name="datum_zavrsetka"><br><br>
-                            Članovi projektnog tima: <input type="text" name="clanovi_projektnog_tima"><br><br>
-                            <input type="hidden" name="voditelj_projekta" value="<?php $user = Auth::user(); print($user->name); ?>">
+                            <input type="hidden" name="voditelj_projekta" value="<?php $user = Auth::user(); print($user->email); ?>">
+                            Članovi projektnog tima: <br>
+                            <?php
+
+                              $user = Auth::user();
+                              //print($user->name);
+                              $clanProjektnogTima = DB::table('users')->pluck('email');
+                              $currentUser = $user->email;
+                              //print($currentUser);
+                              //print($clanProjektnogTima);
+
+                              $size = sizeof($clanProjektnogTima);
+                              //echo($size);
+
+
+                              for($i=0; $i<$size; $i++){
+                                if($currentUser == $clanProjektnogTima[$i]) {
+                                  //echo("current: ");
+                                  //print($currentUser);
+                                  //echo("<br>");
+                                } else {
+                                  //$moguciClanoviProjektnogTima[] = "";
+                                  //$moguciClanoviProjektnogTima .= $clanProjektnogTima[$i];
+                                  //print_r($moguciClanoviProjektnogTima);
+                                  print_r($clanProjektnogTima[$i]);
+                                  //echo($i);
+                                  echo " <input type=\"checkbox\" value=" .$clanProjektnogTima[$i]. "\" name=\"clanovi_projektnog_tima" .$i. "\"><br>";
+                                  //echo("<br>");
+                                  }
+                                }
+                              ?> <br>
+
                         </div>
                         <div>
                            <input type="submit" name="submit">

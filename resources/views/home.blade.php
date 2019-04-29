@@ -19,7 +19,7 @@
 
                         $user = Auth::user();
                         //print($user->name);
-                        $projectNames = DB::table('projects')->where('voditelj_projekta', $user->name)->pluck('naziv_projekta');
+                        $projectNames = DB::table('projects')->where('voditelj_projekta', $user->email)->pluck('naziv_projekta');
                         $size = sizeof($projectNames);
                         //echo($size);
 
