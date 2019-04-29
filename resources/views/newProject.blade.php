@@ -27,7 +27,6 @@
                             Datum završetka: <input type="text" name="datum_zavrsetka"><br><br>
                             Članovi projektnog tima: <input type="text" name="clanovi_projektnog_tima"><br><br>
                             <input type="hidden" name="voditelj_projekta" value="<?php $user = Auth::user(); print($user->name); ?>">
-
                         </div>
                         <div>
                            <input type="submit" name="submit">

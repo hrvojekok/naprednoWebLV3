@@ -27,10 +27,10 @@ class ProjectController extends Controller {
           $data = array('naziv_projekta'=>$naziv_projekta, "opis_projekta"=>$opis_projekta, "cijena_projekta"=>$cijena_projekta,
           	     "obavljeni_poslovi"=>$obavljeni_poslovi, "datum_pocetka"=>$datum_pocetka, "datum_zavrsetka"=>$datum_zavrsetka,
                  "voditelj_projekta"=>$voditelj_projekta, "clanovi_projektnog_tima"=>$clanovi_projektnog_tima);
-                 
+
           DB::table('projects')->insert($data);
           echo "Project inserted successfully.<br/>";
-          echo '<a href = "/insert">Click Here</a> to go back.';
+          echo '<a href = "/home">Click Here</a> to go back.';
 
       }
 }

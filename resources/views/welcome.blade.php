@@ -83,6 +83,18 @@
                 <div class="title m-b-md">
                     Student Projects
                 </div>
+                <div>
+                  <?php
+                    $projectNames = DB::table('projects')->pluck('naziv_projekta');
+                    $size = sizeof($projectNames);
+                    //echo($size);
+                    
+                    for($i=0; $i<$size; $i++){
+                      print_r($projectNames[$i]);
+                      echo("<br>");
+                    }
+                  ?>
+                </div>
             </div>
     </body>
 </html>
