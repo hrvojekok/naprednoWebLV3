@@ -16,17 +16,20 @@
                         </div>
                     @endif
 
-                    <div>
-                        Naziv projekta: <input type="text" name="naziv_projekta"><br><br>
-                        Opis projekta: <input type="text" name="opis_projekta"><br><br>
-                        Cijena projekta: <input type="text" name="cijena_projekta"><br><br>
-                        Obavljeni poslovi: <input type="text" name="obavljeni_poslovi"><br><br>
-                        Datum početka: <input type="text" name="datum_pocetka"><br><br>
-                        Datum završetka: <input type="text" name="datum_završetka"><br><br>
-                    </div>
-                    <div>
-                       <input type="submit" name="submit">
-                    </div>
+                    <form method="post" action="/create">
+                      <input type = "hidden" name = "_token" value = "<?php echo csrf_token(); ?>">
+                        <div>
+                            Naziv projekta: <input type="text" name="naziv_projekta"><br><br>
+                            Opis projekta: <input type="text" name="opis_projekta"><br><br>
+                            Cijena projekta: <input type="text" name="cijena_projekta"><br><br>
+                            Obavljeni poslovi: <input type="text" name="obavljeni_poslovi"><br><br>
+                            Datum početka: <input type="text" name="datum_pocetka"><br><br>
+                            Datum završetka: <input type="text" name="datum_zavrsetka"><br><br>
+                        </div>
+                        <div>
+                           <input type="submit" name="submit">
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
