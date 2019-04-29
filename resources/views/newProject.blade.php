@@ -17,7 +17,7 @@
                     @endif
 
                     <form method="post" action="/create">
-                      <input type = "hidden" name = "_token" value = "<?php echo csrf_token(); ?>">
+                      <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
                         <div>
                             Naziv projekta: <input type="text" name="naziv_projekta"><br><br>
                             Opis projekta: <input type="text" name="opis_projekta"><br><br>
@@ -25,6 +25,9 @@
                             Obavljeni poslovi: <input type="text" name="obavljeni_poslovi"><br><br>
                             Datum početka: <input type="text" name="datum_pocetka"><br><br>
                             Datum završetka: <input type="text" name="datum_zavrsetka"><br><br>
+                            Članovi projektnog tima: <input type="text" name="clanovi_projektnog_tima"><br><br>
+                            <input type="hidden" name="voditelj_projekta" value="<?php $user = Auth::user(); print($user->name); ?>">
+
                         </div>
                         <div>
                            <input type="submit" name="submit">
