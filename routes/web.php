@@ -23,11 +23,10 @@ Route::get('/newProject', function () {
 
 
 
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
 
 Route::get('insert','ProjectController@insertform');
-Route::post('create','ProjectController@insert'); 
+Route::post('create','ProjectController@insert');

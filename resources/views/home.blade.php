@@ -13,16 +13,15 @@
                   @endif
 
                   You are logged in
-
-
                 </div>
 
                 <div class="card-body">
-
-
                     <div>
                       <?php
-                        $projectNames = DB::table('projects')->pluck('naziv_projekta');
+
+                        $user = Auth::user();
+                        //print($user->name);
+                        $projectNames = DB::table('projects')->where('voditelj_projekta', $user->name)->pluck('naziv_projekta');
                         $size = sizeof($projectNames);
                         //echo($size);
 
@@ -33,9 +32,8 @@
                       ?>
                     </div>
 
-
                     <div class="links"><br>
-                        <a href="/newProject">Start a new project</a>
+                          <a href="/newProject">Start a new project</a>
                     </div>
                 </div>
             </div>
