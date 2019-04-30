@@ -21,7 +21,7 @@
                         <div>
 
                           <!-- compares users from "users" table and the current user -->
-                              <!-- <?php
+                               <?php
 
                                 $user = Auth::user();
                                 //print($user->name);
@@ -49,7 +49,7 @@
                                   //print($moguciClanoviProjektnogTima);
                                   echo("<br>");
                                 }
-                              ?> -->
+                              ?>
                             Naziv projekta: <input type="text" name="naziv_projekta"><br><br>
                             Opis projekta: <input type="text" name="opis_projekta"><br><br>
                             Cijena projekta: <input type="text" name="cijena_projekta"><br><br>
@@ -57,7 +57,7 @@
                             Datum početka: <input type="text" name="datum_pocetka"><br><br>
                             Datum završetka: <input type="text" name="datum_zavrsetka"><br><br>
                             <input type="hidden" name="voditelj_projekta" value="<?php $user = Auth::user(); print($user->email); ?>">
-                            Članovi projektnog tima: <br>
+                            <!-- Članovi projektnog tima: <br>
                             <?php
 
                               $user = Auth::user();
@@ -86,7 +86,7 @@
                                   //echo("<br>");
                                   }
                                 }
-                              ?> <br>
+                              ?> <br> -->
 
                         </div>
                         <div>

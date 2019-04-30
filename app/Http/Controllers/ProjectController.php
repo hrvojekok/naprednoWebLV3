@@ -22,12 +22,10 @@ class ProjectController extends Controller {
           $datum_pocetka = $request->input('datum_pocetka');
           $datum_zavrsetka = $request->input('datum_zavrsetka');
           $voditelj_projekta = $request->input('voditelj_projekta');
-          $clanovi_projektnog_tima0 = $request->input('clanovi_projektnog_tima0');
-          $clanovi_projektnog_tima1 = $request->input('clanovi_projektnog_tima1');
 
           $data = array('naziv_projekta'=>$naziv_projekta, "opis_projekta"=>$opis_projekta, "cijena_projekta"=>$cijena_projekta,
           	     "obavljeni_poslovi"=>$obavljeni_poslovi, "datum_pocetka"=>$datum_pocetka, "datum_zavrsetka"=>$datum_zavrsetka,
-                 "voditelj_projekta"=>$voditelj_projekta, "clanovi_projektnog_tima0"=>$clanovi_projektnog_tima0, "clanovi_projektnog_tima1"=>$clanovi_projektnog_tima1);
+                 "voditelj_projekta"=>$voditelj_projekta);
 
           DB::table('projects')->insert($data);
           //echo "Project inserted successfully.<br/>";
