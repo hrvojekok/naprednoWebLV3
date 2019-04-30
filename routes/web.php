@@ -22,6 +22,11 @@ Route::get('/newProject', function () {
 });
 
 
+Route::get('/projectTeam', function () {
+    return view('projectTeam');
+});
+
+
 
 Auth::routes();
 
@@ -30,3 +35,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('insert','ProjectController@insertform');
 Route::post('create','ProjectController@insert');
+
+Route::get('insertTeam','TeamController@insertformTeam');
+Route::post('createTeam','TeamController@insertTeam');
