@@ -15,7 +15,7 @@ class CreateAdministrationTable extends Migration
     {
         Schema::create('administration', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('user_id');
+            $table->string('user_id');
             $table->bigInteger('project_id');
             // $table->foreign('user_id')->references('id')->on('users');
             // $table->foreign('project_id')->references('id')->on('projects');
